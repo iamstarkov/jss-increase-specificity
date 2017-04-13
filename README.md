@@ -1,5 +1,7 @@
 # jss-increase-specificity
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/iamstarkov/jss-increase-specificity.svg)](https://greenkeeper.io/)
+
 Increases specificity of selectors. Port of [postcss-increase-specificity][].
 
 [postcss-increase-specificity]: https://github.com/MadLittleMods/postcss-increase-specificity
