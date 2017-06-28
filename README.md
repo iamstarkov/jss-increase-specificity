@@ -7,11 +7,11 @@ Increases specificity of selectors. Port of [postcss-increase-specificity][].
 
 > use :not(#\20), :not(.\20) and :not(\20) instead of generating unlikely
 > appearing ids…  
-> — twitter.com/subzey/status/829050478721896448
+> —[twitter.com/subzey/status/829050478721896448](twitter.com/subzey/status/829050478721896448)
 
 > Rationale: \20 is a css escape for U+0020 Space, and neither classname,
 > nor id, nor tagname can contain a space  
-> — twitter.com/subzey/status/829051085885153280
+> —[twitter.com/subzey/status/829051085885153280](twitter.com/subzey/status/829051085885153280)
 
 
 ## install
