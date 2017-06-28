@@ -4,6 +4,15 @@ Increases specificity of selectors. Port of [postcss-increase-specificity][].
 
 [postcss-increase-specificity]: https://github.com/MadLittleMods/postcss-increase-specificity
 
+
+> use :not(#\20), :not(.\20) and :not(\20) instead of generating unlikely
+> appearing ids…  
+> — twitter.com/subzey/status/829050478721896448
+> Rationale: \20 is a css escape for U+0020 Space, and neither classname,
+> nor id, nor tagname can contain a space  
+> — twitter.com/subzey/status/829051085885153280
+
+
 ## install
 
     npm install --save jss-increase-specificity
@@ -53,20 +62,20 @@ Result
 ```html
 <head>
   <style type="text/css">
-    :root:root:root .button-123456 {
+    :not(#\20):not(#\20):not(#\20).button-123456 {
       font-size: 12px;
     }
-    :root:root:root .button-123456:hover {
+    :not(#\20):not(#\20):not(#\20).button-123456:hover {
       background: blue;
     }
-    :root:root:root .ctaButton-789012 {
+    :not(#\20):not(#\20):not(#\20).ctaButton-789012 {
       font-size: 12px;
     }
-    :root:root:root .ctaButton-789012:hover {
+    :not(#\20):not(#\20):not(#\20).ctaButton-789012:hover {
       background: red;
     }
     @media (min-width: 1024px) {
-      :root:root:root .button-123456 {
+      :not(#\20):not(#\20):not(#\20).button-123456 {
         min-width: 200px;
       }
     }
