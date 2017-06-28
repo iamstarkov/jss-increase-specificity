@@ -7,12 +7,17 @@
  * — twitter.com/subzey/status/829051085885153280
  */
 
-const selector = ':not(#\\20)';
+var selector = ':not(#\\20)';
+var defaultOptions = { repeat: 3 };
 
-module.exports = function increaseSpecificity({ repeat }={ repeat: 3 }) {
-  const prefix = Array(repeat + 1).join(selector);
-  const onProcessSheet = (sheet) => {
-    sheet.rules.index.forEach(rule => {
+module.exports = function increaseSpecificity(userOptions) {
+  var options = Object.assign({}, defaultOptions, userOptions);
+  var repeat = option.repeat;
+
+  var prefix = Array(repeat + 1).join(selector);
+
+  function onProcessSheet(sheet) {
+    sheet.rules.index.forEach(function(rule) {
       if (rule.type === 'conditional') {
         return onProcessSheet(rule);
       }
