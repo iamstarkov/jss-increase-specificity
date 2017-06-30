@@ -12,9 +12,7 @@ var defaultOptions = { repeat: 3 };
 
 module.exports = function increaseSpecificity(userOptions) {
   var options = Object.assign({}, defaultOptions, userOptions);
-  var repeat = option.repeat;
-
-  var prefix = Array(repeat + 1).join(selector);
+  var prefix = Array(options.repeat + 1).join(selector);
 
   function onProcessSheet(sheet) {
     sheet.rules.index.forEach(function(rule) {
@@ -24,7 +22,7 @@ module.exports = function increaseSpecificity(userOptions) {
 
       rule.selectorText = prefix + rule.selectorText;
     });
-  };
+  }
 
   return { onProcessSheet };
-}
+};
