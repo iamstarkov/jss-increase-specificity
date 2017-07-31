@@ -20,7 +20,9 @@ module.exports = function increaseSpecificity(userOptions) {
         return onProcessSheet(rule);
       }
 
-      rule.selectorText = prefix + rule.selectorText;
+      if (rule.type === 'style') {
+        rule.selectorText = prefix + rule.selectorText;
+      }
     });
   }
 
