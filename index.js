@@ -24,5 +24,5 @@ module.exports = function increaseSpecificity(userOptions) {
     });
   }
 
-  return { onProcessSheet };
+  return { onProcessSheet: onProcessSheet };
 };
