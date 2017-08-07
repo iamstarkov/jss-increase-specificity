@@ -1,12 +1,12 @@
 {
   "name": "jss-increase-specificity",
   "version": "0.2.3",
-  "description": "",
+  "description": "Increases specificity of selectors.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": ["jss", "specificity", "isolation"],
   "author": "",
   "license": "ISC"
 }
