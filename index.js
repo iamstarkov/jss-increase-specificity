@@ -15,6 +15,8 @@ module.exports = function increaseSpecificity(userOptions) {
   var prefix = Array(options.repeat + 1).join(selector);
 
   function onProcessSheet(sheet) {
+    if (sheet.options.increaseSpecificity === false) return;
+
     sheet.rules.index.forEach(function(rule) {
       if (rule.type === 'conditional') {
         return onProcessSheet(rule);

@@ -27,9 +27,9 @@ import jss from 'jss'
 import preset from 'jss-preset-default'
 import increaseSpecificity from 'jss-increase-specificity';
 
-jss
-  .setup(preset())
-  .use(increaseSpecificity())
+  jss
+    .setup(preset())
+    .use(increaseSpecificity())
 
   const styles = {
     button: {
@@ -56,6 +56,7 @@ jss
   document.body.innerHTML = `
     <button class="${classes.button}">Button</button>
     <button class="${classes.ctaButton}">CTA Button</button>
+  `
 ```
 
 Result
@@ -90,17 +91,22 @@ Result
 
 ## API
 
+### increaseSpecificity(options)
 
-### increaseSpecificity(repeat)
+Options:
 
-    // increaseSpecificity :: Number -> Function
-
-#### repeat
+- `repeat`
 
 Type: `Number`  
 Default: `3`
 
-How many times should plugin repeat `:root`.
+How many times should plugin repeat `:not(#\20)`.
+
+### Disable plugin for a Sheet
+
+```js
+jss.createStyleSheet(styles, {increaseSpecificity: false})
+```
 
 ## License
 
