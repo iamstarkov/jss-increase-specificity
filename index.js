@@ -15,9 +15,12 @@ module.exports = function increaseSpecificity(userOptions) {
   var prefix = Array(options.repeat + 1).join(selector);
 
   function onProcessRule(rule, sheet) {
+    const {parent} = rule.options;
+
     if (
       sheet.options.increaseSpecificity === false ||
-      rule.type !== 'style'
+      rule.type !== 'style' ||
+      (parent && parent.type === 'keyframes')
     ) return;
 
     rule.selectorText = prefix + rule.selectorText;
