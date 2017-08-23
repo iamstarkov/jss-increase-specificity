@@ -1,6 +1,6 @@
 {
   "name": "jss-increase-specificity",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Increases specificity of selectors.",
   "main": "index.js",
   "scripts": {
