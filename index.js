@@ -15,7 +15,7 @@ module.exports = function increaseSpecificity(userOptions) {
   var prefix = Array(options.repeat + 1).join(selector);
 
   function onProcessRule(rule, sheet) {
-    const parent = rule.options.parent;
+    var parent = rule.options.parent;
 
     if (
       sheet.options.increaseSpecificity === false ||
